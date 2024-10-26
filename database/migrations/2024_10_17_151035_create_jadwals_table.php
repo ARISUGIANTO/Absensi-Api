@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('jadwals', function (Blueprint $table) {
-            $table->char('Hari');
-            $table->integer('Jam');
+            $table->id();  // Primary key
+            $table->string('Hari');
+            $table->string('Jam', 10);
             $table->string('Kelas');
-            $table->string('Mata Pelajaran');
-            $table->integer('Ruang');
-            $table->text('Catatan');
+            $table->string('Mata_Pelajaran');
+            $table->string('Ruang');
+            $table->text('Catatan')->nullable();
             $table->timestamps();
         });
     }

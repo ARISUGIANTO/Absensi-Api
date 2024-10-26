@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('absensis', function (Blueprint $table) {
             $table->id('id');
             $table->string('Nama');
-            $table->dateTime('Waktu Absensi');
-            $table->string('Foto Absensi');
-            $table->string('Status Absensi');
-            $table->string('Lokasi Absensi');
+            $table->string('Waktu_Absensi', 10);
+            $table->string('Foto_Absensi');
+            $table->string('Status_Absensi');
+            $table->string('Lokasi_Absensi');
             $table->timestamps();
         });
     }
